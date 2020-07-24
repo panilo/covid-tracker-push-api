@@ -11,7 +11,9 @@
     "lint:staged": "lint-staged",
     "start": "node .",
     "start:dev": "nodemon --config .nodemonrc . | pino-pretty --colorize",
-    "test": "jest --config .jest.json --coverage"
+    "test": "jest --config .jest.json --coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@nearform/sql": "^1.4.0",
@@ -33,7 +35,8 @@
     "pg-range": "^1.1.0",
     "phone": "^2.4.11",
     "twilio": "^3.42.1",
-    "under-pressure": "^3.2.1"
+    "under-pressure": "^3.2.1",
+    "snyk": "^1.366.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
@@ -60,5 +63,6 @@
       "git add"
     ]
   },
-  "prettier": "prettier-config-standard"
+  "prettier": "prettier-config-standard",
+  "snyk": true
 }
